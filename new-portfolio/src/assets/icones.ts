@@ -5,6 +5,7 @@ export {
     IconBrandWhatsapp,
     IconBrandGithubFilled,
     IconBrandLinkedinFilled,
-    IconDownload
+    IconDownload,
+    IconDatabase
     } 
     from "@tabler/icons-react"

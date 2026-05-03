@@ -1,55 +1,76 @@
-import NavBar from "@/app/components/widgets/Navbar";
-import { IconBrandGithub, IconBrandLinkedin, IconBrandWhatsapp } from "@tabler/icons-react"
-import Link from "next/link"
-import Footer from "../components/widgets/Footer";
+import { IconBrandGithub, IconBrandLinkedin, IconBrandWhatsapp, IconMail, IconMapPin } from "@tabler/icons-react"
 
-export default function Home() {
-  return (
-    <div className="flex flex-col min-h-screen">
-      <div>
-        <NavBar />
-      </div>
+import Footer from "@/app/components/widgets/Footer"
+import NavBar from "@/app/components/widgets/Navbar"
 
-      <main className="flex-grow flex justify-center items-center">
-        <div className="p-10 border-1 border-gray-800 rounded-xl">
-          <h1 className="text-4xl text-gray-700">Entre em Contato:</h1>
+export default function Contato() {
+    return (
+        <div className="min-h-screen flex flex-col bg-[#0a0a0a] text-[#ededed]">
+            <NavBar />
 
-          <nav className="p-5">
-            <ul className="pt-5">
-              <Link
-                className="flex items-center gap-2 hover:text-gray-400"
-                href="https://github.com/monica308"
-                target="_blank"
-              >
-                <IconBrandGithub /> GitHub
-              </Link>
-            </ul>
+            <main className="flex-1 flex flex-col items-center justify-center p-6 md:p-10">
+                <div className="max-w-4xl w-full">
+                    <div className="text-center mb-12">
+                        <h1 className="text-5xl font-bold tracking-tighter mb-4">
+                            Vamos conversar sobre o seu <span className="text-blue-500">próximo projeto?</span>
+                        </h1>
+                        <p className="text-gray-400 text-lg">
+                            Sinta-se à vontade para me chamar em qualquer uma das redes abaixo.
+                        </p>
+                    </div>
 
-            <ul className="pt-5">
-              <Link
-                className="flex items-center gap-2 hover:text-gray-400"
-                href="https://www.linkedin.com/in/m%C3%B4nica-ara%C3%BAjo-91214317a/"
-                target="_blank"
-              >
-                <IconBrandLinkedin /> Linkedin
-              </Link>
-            </ul>
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                        
+                        <a 
+                            href="https://github.com/monica308" 
+                            target="_blank" 
+                            rel="noopener noreferrer"
+                            className="bg-[#111111] border border-[#1f1f1f] rounded-[2rem] p-8 flex flex-col items-center gap-4 hover:border-white transition-all group"
+                        >
+                            <IconBrandGithub size={40} className="text-gray-400 group-hover:text-white" />
+                            <span className="font-bold">GitHub</span>
+                        </a>
 
-            <ul className="pt-5">
-              <Link
-                className="flex items-center gap-2 hover:text-gray-400"
-                href="https://wa.me/553194998935"
-                target="_blank"
-              >
-                <IconBrandWhatsapp /> Whatsapp
-              </Link>
-            </ul>
-          </nav>
+                        <a 
+                            href="https://www.linkedin.com/in/m%C3%B4nica-ara%C3%BAjo-91214317a/" 
+                            target="_blank" 
+                            rel="noopener noreferrer"
+                            className="bg-[#111111] border border-[#1f1f1f] rounded-[2rem] p-8 flex flex-col items-center gap-4 hover:border-blue-500 transition-all group"
+                        >
+                            <IconBrandLinkedin size={40} className="text-gray-400 group-hover:text-blue-500" />
+                            <span className="font-bold">LinkedIn</span>
+                        </a>
+
+                        <a 
+                            href="https://wa.me/553194998935" 
+                            target="_blank" 
+                            rel="noopener noreferrer"
+                            className="bg-[#111111] border border-[#1f1f1f] rounded-[2rem] p-8 flex flex-col items-center gap-4 hover:border-green-500 transition-all group"
+                        >
+                            <IconBrandWhatsapp size={40} className="text-gray-400 group-hover:text-green-500" />
+                            <span className="font-bold">WhatsApp</span>
+                        </a>
+
+                        <div className="md:col-span-2 bg-[#111111] border border-[#1f1f1f] rounded-[2rem] p-8 flex items-center gap-6">
+                            <div className="bg-blue-500/10 p-4 rounded-2xl">
+                                <IconMail className="text-blue-500" />
+                            </div>
+                            <div>
+                                <p className="text-xs uppercase tracking-widest text-gray-500">E-mail Profissional</p>
+                                <p className="text-lg font-medium">monicaiaraaraujo@gmail.com</p>
+                            </div>
+                        </div>
+
+                        <div className="bg-[#111111] border border-[#1f1f1f] rounded-[2rem] p-8 flex items-center gap-4">
+                            <IconMapPin className="text-gray-500" />
+                            <span className="text-gray-400">Ipatinga, MG</span>
+                        </div>
+
+                    </div>
+                </div>
+            </main>
+
+            <Footer />
         </div>
-      </main>
-
-      <div id="footer-trigger" className="h-1 w-full" />
-      <Footer />
-    </div>
-  );
+    )
 }

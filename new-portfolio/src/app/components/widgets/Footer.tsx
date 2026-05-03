@@ -1,76 +1,31 @@
-'use client'
-import { useEffect, useRef, useState } from 'react';
-import { motion } from 'framer-motion';
-import {
-  IconBrandGithub,
-  IconBrandLinkedin,
-  IconBrandWhatsapp,
-} from '@tabler/icons-react';
+import { IconBrandGithub, IconBrandLinkedin, IconBrandWhatsapp } from "@tabler/icons-react"
 
-const Footer = () => {
-  const [isVisible, setIsVisible] = useState<boolean>(false);
-  const observerRef = useRef<IntersectionObserver | null>(null);
+export default function Footer() {
+    const year = new Date().getFullYear()
 
-  useEffect(() => {
-    const target = document.getElementById('footer-trigger');
-    if (!target) return;
+    return (
+        <footer className="w-full bg-[#0a0a0a] border-t border-[#1f1f1f] py-8 mt-auto">
+            <div className="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-4">
+                <div className="text-sm text-gray-500 font-medium">
+                    © {year} Mônica Araújo — <span className="text-gray-600">Full-Stack Developer</span>
+                </div>
 
-    observerRef.current = new IntersectionObserver(
-      ([entry]) => {
-        setIsVisible(entry.isIntersecting);
-      },
-      {
-        threshold: 0.1,
-      }
-    );
+                <div className="flex items-center gap-6">
+                    <a href="https://github.com/monica308" target="_blank" rel="noopener noreferrer" className="text-gray-500 hover:text-white transition-colors">
+                        <IconBrandGithub size={20} />
+                    </a>
+                    <a href="https://linkedin.com/in/monica-araujo" target="_blank" rel="noopener noreferrer" className="text-gray-500 hover:text-blue-500 transition-colors">
+                        <IconBrandLinkedin size={20} />
+                    </a>
+                    <a href="https://wa.me/553194998935" target="_blank" rel="noopener noreferrer" className="text-gray-500 hover:text-green-500 transition-colors">
+                        <IconBrandWhatsapp size={20} />
+                    </a>
+                </div>
 
-    observerRef.current.observe(target);
-
-    return () => {
-      if (observerRef.current && target) {
-        observerRef.current.unobserve(target);
-      }
-    };
-  }, []);
-
-  return (
-    <motion.footer
-      initial={{ opacity: 0, y: 30 }}
-      animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 30 }}
-      transition={{ duration: 0.8 }}
-      className="w-full py-4 bg-gray-100 flex flex-col items-center justify-center text-center text-sm text-gray-700"
-    >
-      <p className="mb-2">
-        © {new Date().getFullYear()} Site desenvolvido por Mônica Araújo
-      </p>
-      <div className="flex gap-4">
-        <a
-          href="https://github.com/monica308"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="hover:text-blue-600 transition"
-        >
-          <IconBrandGithub size={22} />
-        </a>
-        <a
-          href="https://linkedin.com/in/monica-araujo-dev"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="hover:text-blue-600 transition"
-        >
-          <IconBrandLinkedin size={22} />
-        </a>
-        <a
-          href="https://wa.me/5531994998935"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="hover:text-green-500 transition"
-        >
-          <IconBrandWhatsapp size={22} />
-        </a>
-      </div>
-    </motion.footer>
-  );
-};
-
-export default Footer;
+                <div className="text-[10px] uppercase tracking-widest text-gray-700 font-bold">
+                    Built with Next.js & .NET 8
+                </div>
+            </div>
+        </footer>
+    )
+}
