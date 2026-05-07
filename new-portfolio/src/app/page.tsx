@@ -31,7 +31,7 @@ export default function Home() {
               alt="Mônica Araújo"
               width={500}
               height={700}
-              className="object-cover w-full h-full grayscale hover:grayscale-0 transition-all duration-500"
+              className="object-cover w-full h-full grayscale-0 md:grayscale md:hover:grayscale-0 transition-all duration-500"
             />
           </div>
 

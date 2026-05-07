@@ -34,11 +34,6 @@ export default function ProjetosFiltrados() {
 
     return (
         <section className="max-w-7xl mx-auto w-full p-4 md:p-10">
-            <div className="mb-12">
-                <h2 className="text-4xl font-bold tracking-tighter text-[#ededed]">Meus Projetos</h2>
-                <p className="text-gray-400 mt-2">Repositórios filtrados diretamente do GitHub.</p>
-            </div>
-
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 {repos.map((repo) => (
                     <div
@@ -51,7 +46,7 @@ export default function ProjetosFiltrados() {
                                 alt={`Screenshot do projeto ${repo.name}`}
                                 fill
                                 sizes="(max-width: 768px) 100vw, 50vw"
-                                className="object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-500"
+                                className="object-cover grayscale-0 md:grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-500"
                                 onError={() => setImgError(prev => ({ ...prev, [repo.id]: true }))}
                             />
                         </div>

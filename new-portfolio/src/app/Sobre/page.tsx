@@ -59,7 +59,7 @@ export default function Sobre() {
                 src="/img/mom.jpeg" 
                 alt="Eu e meu filho" 
                 fill 
-                className="object-cover grayscale hover:grayscale-0 transition-all duration-500"
+                className="object-cover transition-all duration-500 grayscale-0 md:grayscale md:hover:grayscale-0"
               />
             </div>
           </div>

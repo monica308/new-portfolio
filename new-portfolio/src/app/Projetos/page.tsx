@@ -15,7 +15,7 @@ export default function Projetos() {
                                 Meus <span className="text-blue-500">Projetos</span>
                             </h1>
                             <p className="text-gray-400 text-lg leading-relaxed">
-                                Uma vitrine do meu desenvolvimento técnico, focando na transição para Full Stack e arquiteturas modernas com .NET e Next.js.
+                                Uma vitrine do meu desenvolvimento técnico, focando na transição para Full Stack e arquiteturas modernas com .NET Core e Next.js.
                             </p>
                         </div>
                         

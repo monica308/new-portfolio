@@ -1,23 +1,26 @@
 "use client"
-import { useState, useEffect } from "react";
+
+import { useEffect, useState } from "react"
 
 export default function TypedText() {
-  const texto = "< Transformando idéias em código, e código em experiências incríveis! />";
-  const [textoExibido, setTextoExibido] = useState("");
-  const [index, setIndex] = useState(0);
+  const texto = "< Transformando idéias em código, e código em experiências incríveis! />"
+  const [textoExibido, setTextoExibido] = useState("")
+  const [index, setIndex] = useState(0)
 
   useEffect(() => {
     if (index < texto.length) {
       const timeout = setTimeout(() => {
-        setTextoExibido((prev) => prev + texto[index]);
-        setIndex(index + 1);
-      }, 100); 
+        setTextoExibido((prev) => prev + texto[index])
+        setIndex(index + 1)
+      }, 100)
 
-      return () => clearTimeout(timeout); 
+      return () => clearTimeout(timeout)
     }
-  }, [index, texto]);
+  }, [index, texto])
 
   return (
-    <h1 className="text-3xl text-black dark:text-white font-minhaFonte text-center md:text-left break-words max-w-md">{textoExibido}</h1>
-  );
+    <h1 className="text-3xl text-[#ededed] font-minhaFonte text-center md:text-left break-words max-w-md">
+      {textoExibido}
+    </h1>
+  )
 }
