@@ -14,7 +14,7 @@ export default function Footer() {
                     <a href="https://github.com/monica308" target="_blank" rel="noopener noreferrer" className="text-gray-500 hover:text-white transition-colors">
                         <IconBrandGithub size={20} />
                     </a>
-                    <a href="https://linkedin.com/in/monica-araujo" target="_blank" rel="noopener noreferrer" className="text-gray-500 hover:text-blue-500 transition-colors">
+                    <a href="https://linkedin.com/in/monica-araujo-dev/" target="_blank" rel="noopener noreferrer" className="text-gray-500 hover:text-blue-500 transition-colors">
                         <IconBrandLinkedin size={20} />
                     </a>
                     <a href="https://wa.me/553194998935" target="_blank" rel="noopener noreferrer" className="text-gray-500 hover:text-green-500 transition-colors">
