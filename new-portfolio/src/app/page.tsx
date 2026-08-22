@@ -15,7 +15,7 @@ export default function Home() {
       <NavBar />
 
       <main className="flex-1 max-w-7xl mx-auto w-full p-4 md:p-10">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-4 auto-rows-min">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-4 auto-rows-min md:grid-flow-dense">
           <div className="md:col-span-2 bg-[#111111] border border-[#1f1f1f] rounded-[2rem] p-8 flex flex-col justify-center min-h-[300px] hover:border-blue-500 transition-colors">
             <h1 className="text-4xl font-bold mb-4">Olá, sou Mônica Araújo</h1>
             <p className="text-gray-400 text-lg leading-relaxed">
