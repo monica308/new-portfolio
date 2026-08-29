@@ -119,7 +119,7 @@ export default function Home() {
               </p>
             </div>
             <motion.a
-              href="/CurriculoMonicaAtualizado.pdf"
+              href="/Curriculo_Monica_Araujo_Atualizado.pdf"
               download
               aria-label="Baixar currículo"
               whileHover={{ scale: 1.05 }}
